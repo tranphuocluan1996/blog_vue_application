@@ -1,18 +1,18 @@
 import Vue from "vue";
 import Vuex from "vuex";
-
-import listBlogs from "../mock/blog";
+import products from "./products";
+import user from "./users";
 
 Vue.use(Vuex);
 
-
-
 const store = new Vuex.Store({
-  state: 
-    {
-      listBlogs
-    }
+  // namespaced: true,
+  strict: process.env.NODE_ENV !== "production",
 
+
+  modules: {
+    products,
+    user
+  }
 });
-
 export default store;

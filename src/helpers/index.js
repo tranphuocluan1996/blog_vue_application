@@ -1,4 +1,4 @@
-const removeUrlVietnamese = ()=> {
+const removeUrlVietnamese = (alias)=> {
   var str = alias;
   str = str.toLowerCase();
   str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
@@ -9,7 +9,7 @@ const removeUrlVietnamese = ()=> {
   str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
   str = str.replace(/đ/g, "d");
   str = str.replace(
-    /!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'|\"|\&|\#|\[|\]|~|\$|_|`|-|{|}|\||\\/g,
+    /!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'|\"|\&|\#|\[|\]|~|\$|_|`|{|}|\||\\/g,
     " "
   );
   str = str.replace(/ + /g, " ");
@@ -17,6 +17,6 @@ const removeUrlVietnamese = ()=> {
   return str;
 }
 
-export default {
+export {
   removeUrlVietnamese
 };

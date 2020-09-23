@@ -1,39 +1,15 @@
 <template>
-  <div id="app">
-    <navigation-comp />
-     
-    <router-view></router-view>
-
-     <footer-comp />
-    
-  </div>
+    <div id="app">
+        <home-page />
+    </div>
 </template>
 
 <script>
-
-import FooterComp from './components/FooterComp';
-import NavigationComp from './components/NavigationComp';
-
-
-
-
-
-
-
+import HomePage from './pages/HomePage'
 export default {
-  name: 'app',
-  components:{
-    FooterComp,
-    NavigationComp,
-
-
-
-  },
-  data () {
-    return {
-     
+    components:{
+        HomePage
     }
-  }
 }
 </script>
 

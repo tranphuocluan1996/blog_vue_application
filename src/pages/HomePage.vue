@@ -1,32 +1,88 @@
 <template>
-		<div class="home-page">
+  <body>
 
+  <!-- Navigation -->
+  <header-nav />
 
-	<header-comp 
-	 backgound_img="/dist/img/home-bg.jpg"
-	/>
+  <!-- Page Content -->
+  <div class="container">
 
-	<!-- Main Content -->
-	<blog-list />
+    <div class="row">
 
-	<hr>
+      <div class="col-lg-3">
 
+        <h4 class="my-4">Danh mục sản phẩm</h4>
+        <div class="list-group">
+          <a href="#" class="list-group-item">Điện thoại</a>
+          <a href="#" class="list-group-item">Máy tính bảng </a>
+          <a href="#" class="list-group-item">Macbook</a>
+          <a href="#" class="list-group-item">PS4</a>
+          <a href="#" class="list-group-item">Ti vi</a>
+        </div>
 
-		</div>
+      </div>
+      <!-- /.col-lg-3 -->
+
+      <div class="col-lg-9">
+
+        <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+       <list-products />
+        <!-- /.row -->
+
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+ <comp-footer />
+  <!-- Bootstrap core JavaScript -->
+  <!-- <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+
+</body>
 </template>
 
 <script>
-
-import BlogList from '../components/BlogList'
-import HeaderComp from '../components/HeaderComp';
+import HeaderNav from '../components/HeaderNav'
+import CompFooter from '../components/CompFooter'
+import ListProducts from '../components/ListProducts'
 export default {
-		name:"Home-page",
-
-		components:{
-			
-			HeaderComp,
-			BlogList
-		}
+    components:{
+        ListProducts,
+        HeaderNav,
+        CompFooter
+    }
 }
 </script>
 
